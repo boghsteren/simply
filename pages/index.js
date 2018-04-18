@@ -5,6 +5,7 @@ import Nav from '../components/nav'
 import {
   Menu,
   Segment,
+  Image,
   Header,
   Container,
   Card,
@@ -17,29 +18,19 @@ export default () =>
   <div>
     <Head title='Home' />
     <Nav />
-    <Container>
-      <Header size={'huge'} textAlign='center'>
-        Welcome to my place
-      </Header>
-      <Divider section hidden />
-      <Header size={'huge'} textAlign='center'>
-        <Icon color={'red'} name='arrow circle down' />
-      </Header>
-      <Divider section hidden />
-
-      <Header size={'huge'} textAlign='center'>
-        I do digital and product strategy, agile delivery and a bit of code
-      </Header>
-      <Divider section hidden />
-
-      <Header size={'huge'} textAlign='center'>
-        <Icon color={'red'} name='arrow circle down' />
-      </Header>
-      <Divider section hidden />
-
-      <Header size={'huge'} textAlign='center'>
-        Take a look around and get in touch if I can help you out
-      </Header>
-    </Container>
-    <MainChoices />
+    <Image src='../static/cover2.jpg' fluid />
+    <div
+      style={{
+        position: 'relative',
+        marginTop: '-700px',
+        zIndex: 99
+      }}
+    >
+      <Container>
+        <Header size={'huge'}>
+          Look around and get in touch if I can help
+        </Header>
+        <Header>I do digital strategy, business and development</Header>
+      </Container>
+    </div>
   </div>

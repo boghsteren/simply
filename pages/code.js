@@ -24,7 +24,10 @@ export default () =>
     <Nav />
     <Transition animation={'fade'} transitionOnMount duration={1000}>
       <Container>
-        <Card.Group itemsPerRow={1} stackable>
+        <Header size={'huge'} textAlign='center'>
+          Websites I have built
+        </Header>
+        <Card.Group itemsPerRow={2} stackable>
           <Card fluid color={'red'}>
             <Image src='../static/episodeFriis.png' />
             <Card.Content>

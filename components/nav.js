@@ -5,32 +5,58 @@ import { Menu, Container, Icon } from 'semantic-ui-react'
 import { withRouter } from 'next/router'
 
 export const Nav = ({ router }) =>
-  <nav style={{ marginBottom: '50px' }}>
-    <Menu size='huge' inverted widths={4}>
+  <nav>
+    <Menu
+      color={'grey'}
+      inverted
+      borderless
+      size={'mini'}
+      icon='labeled'
+      fixed={'top'}
+      widths={8}
+    >
       <Link href='/'>
         <Menu.Item color={'red'} active={router.pathname === '/'}>
           <Icon name='home' />
-          SIMPLY DIGITAL
+          Simply Digital
         </Menu.Item>
       </Link>
       <Link href='/code'>
         <Menu.Item color={'red'} active={router.pathname === '/code'}>
           <Icon name='code' />
-          Websites I have built
+          Websites
         </Menu.Item>
       </Link>
       <Link href='/projects'>
         <Menu.Item color={'red'} active={router.pathname === '/projects'}>
           <Icon name='wrench' />
-          Projects I have worked on
+          Projects
         </Menu.Item>
       </Link>
       <Link href='/roles'>
         <Menu.Item color={'red'} active={router.pathname === '/roles'}>
           <Icon name='id card outline' />
-          Roles I have had
+          Roles
         </Menu.Item>
       </Link>
+      <Link href='/opinions'>
+        <Menu.Item color={'red'} active={router.pathname === '/opinions'}>
+          <Icon name='comment' />
+          Opinions
+        </Menu.Item>
+      </Link>
+      <Menu.Item as={'a'} href='https://github.com/boghsteren' color={'red'}>
+        <Icon name='github' />
+        Github
+      </Menu.Item>
+      <Menu.Item as={'a'} color={'red'} href='https://linkedin.com/jakobbs'>
+        <Icon name='linkedin' />
+        Linkedin
+      </Menu.Item>
+      <Menu.Item as={'a'} color={'red'} href='https://linkedin.com/jakobbs'>
+        <Icon name='envelope' />
+        Contact
+      </Menu.Item>
     </Menu>
   </nav>
 
