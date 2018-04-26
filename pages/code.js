@@ -16,7 +16,6 @@ import {
   Image,
   List
 } from 'semantic-ui-react'
-import { MainChoices } from '../components/mainchoices'
 
 export default () =>
   <div>

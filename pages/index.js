@@ -10,27 +10,30 @@ import {
   Container,
   Card,
   Icon,
-  Divider
+  Divider,
+  Transition
 } from 'semantic-ui-react'
-import { MainChoices } from '../components/mainchoices'
 
 export default () =>
   <div>
     <Head title='Home' />
     <Nav />
-    <Image src='../static/cover2.jpg' fluid />
-    <div
-      style={{
-        position: 'relative',
-        marginTop: '-700px',
-        zIndex: 99
-      }}
-    >
-      <Container>
-        <Header size={'huge'}>
-          Look around and get in touch if I can help
-        </Header>
-        <Header>I do digital strategy, business and development</Header>
-      </Container>
-    </div>
+    <Transition animation={'fade'} transitionOnMount duration={1000}>
+      <div>
+        <div style={{ marginTop: '-50px' }}>
+          <Image src='../static/cover2.jpg' fluid />
+          <div
+            style={{
+              position: 'relative',
+              marginTop: '-50%',
+              zIndex: 99
+            }}
+          >
+            <Container text>
+              <Header>I do digital strategy, business and development</Header>
+            </Container>
+          </div>
+        </div>
+      </div>
+    </Transition>
   </div>

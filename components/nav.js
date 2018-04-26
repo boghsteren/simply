@@ -5,15 +5,14 @@ import { Menu, Container, Icon } from 'semantic-ui-react'
 import { withRouter } from 'next/router'
 
 export const Nav = ({ router }) =>
-  <nav>
+  <nav style={{ marginBottom: '50px' }}>
     <Menu
       color={'grey'}
+      stackable
       inverted
-      borderless
-      size={'mini'}
+      size={'tiny'}
       icon='labeled'
-      fixed={'top'}
-      widths={8}
+      widths={7}
     >
       <Link href='/'>
         <Menu.Item color={'red'} active={router.pathname === '/'}>
@@ -30,7 +29,7 @@ export const Nav = ({ router }) =>
       <Link href='/projects'>
         <Menu.Item color={'red'} active={router.pathname === '/projects'}>
           <Icon name='wrench' />
-          Projects
+          Consultancy
         </Menu.Item>
       </Link>
       <Link href='/roles'>
@@ -39,21 +38,20 @@ export const Nav = ({ router }) =>
           Roles
         </Menu.Item>
       </Link>
-      <Link href='/opinions'>
-        <Menu.Item color={'red'} active={router.pathname === '/opinions'}>
-          <Icon name='comment' />
-          Opinions
-        </Menu.Item>
-      </Link>
+
       <Menu.Item as={'a'} href='https://github.com/boghsteren' color={'red'}>
         <Icon name='github' />
         Github
       </Menu.Item>
-      <Menu.Item as={'a'} color={'red'} href='https://linkedin.com/jakobbs'>
+      <Menu.Item
+        as={'a'}
+        color={'red'}
+        href='https://www.linkedin.com/in/jakobbs/'
+      >
         <Icon name='linkedin' />
         Linkedin
       </Menu.Item>
-      <Menu.Item as={'a'} color={'red'} href='https://linkedin.com/jakobbs'>
+      <Menu.Item as={'a'} color={'red'} href='mailto:jakob@simply-digital.dk'>
         <Icon name='envelope' />
         Contact
       </Menu.Item>
