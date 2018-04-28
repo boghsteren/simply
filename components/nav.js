@@ -6,14 +6,7 @@ import { withRouter } from 'next/router'
 
 export const Nav = ({ router }) =>
   <nav style={{ marginBottom: '50px' }}>
-    <Menu
-      color={'grey'}
-      stackable
-      inverted
-      size={'tiny'}
-      icon='labeled'
-      widths={7}
-    >
+    <Menu color={'grey'} inverted size={'mini'} icon='labeled' widths={7}>
       <Link href='/'>
         <Menu.Item color={'red'} active={router.pathname === '/'}>
           <Icon name='home' />
