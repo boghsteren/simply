@@ -26,7 +26,7 @@ export default () =>
         </Header>
         <Card.Group itemsPerRow={2}>
           <Card>
-            <Image src='/static/fromtu.png' />
+            <Image src='/static/fromtu-final.jpg' />
             <Card.Content>
               <Card.Header>Chief Product Officer</Card.Header>
               <Card.Meta>Fromtu</Card.Meta>
@@ -119,7 +119,7 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
-            <Image src='/static/9s-dark.png' />
+            <Image src='/static/9s-final.jpg' />
 
             <Card.Content>
               <Card.Header>Head of Product</Card.Header>
@@ -232,6 +232,8 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
+            <Image src='/static/yousee-final.jpg' />
+
             <Card.Content>
               <Card.Header>Head of On Demand</Card.Header>
               <Card.Meta> YouSee</Card.Meta>
@@ -284,6 +286,8 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
+            <Image src='/static/yousee-final.jpg' />
+
             <Card.Content>
               <Card.Header>Product Manager - Digital TV</Card.Header>
               <Card.Meta>YouSee</Card.Meta>
@@ -292,12 +296,16 @@ export default () =>
           </Card>
           <Card>
             <Card.Content>
+              <Image src='/static/tdc-final.jpg' />
+
               <Card.Header>Executive Assistant</Card.Header>
               <Card.Meta>TDC Sweden</Card.Meta>
               <Card.Meta>May 2007 - December 2007</Card.Meta>
             </Card.Content>
           </Card>
           <Card>
+            <Image src='/static/tdc-final.jpg' />
+
             <Card.Content>
               <Card.Header>Product Manager - Broadband</Card.Header>
               <Card.Meta>TDC</Card.Meta>
@@ -305,6 +313,8 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
+            <Image src='/static/rudersdal-final.jpg' />
+
             <Card.Content>
               <Card.Header>Analyst</Card.Header>
               <Card.Meta>Rudersdal Kommune</Card.Meta>
