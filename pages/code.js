@@ -59,9 +59,7 @@ export default () =>
                     State is managed via <b>Redux</b>
                   </List.Item>
                   <List.Item>
-                    The app is served via a <b>Node.js</b> server which also
-                    runs a scheduler for notification emails and provides APIs
-                    for screenshots
+                    The app is served via a <b>Node.js</b> server
                   </List.Item>
                   <List.Item>
                     All the site content is created and stored in{' '}
@@ -211,6 +209,54 @@ export default () =>
                   <List.Item>
                     <b>Open Graph</b> is supported across the shop for proper
                     social sharing of products
+                  </List.Item>
+                </List>
+              </Card.Meta>
+            </Card.Content>
+          </Card>
+          <Card fluid color={'red'}>
+            <Image src='../static/simply.png' />
+            <Card.Content>
+              <Card.Header content={'Simply-digital.dk'} />
+              <Card.Description>
+                Simply Digital is my one man band digital consultancy.
+              </Card.Description>
+              <Divider />
+              <Card.Description>
+                The Simply Digital site provides a quick overview of who I am
+                and what I do. It is more of a placeholder than anything at this
+                stage, to be honest.
+              </Card.Description>
+              <Divider />
+              <Card.Meta>
+                <List bulleted>
+                  <List.Item>
+                    The app was built using <b>React.js</b>
+                  </List.Item>
+                  <List.Item>
+                    It uses the <b>Next.js</b> framework for server side
+                    rendering, routing and header management.
+                  </List.Item>
+                  <List.Item>
+                    The UI was created with the <b>Semantic UI for React</b>,
+                    including transitions and responsive views
+                  </List.Item>
+                  <List.Item>
+                    State is managed via <b>Redux</b>
+                  </List.Item>
+                  <List.Item>
+                    The app is served via a <b>Node.js</b> server
+                  </List.Item>
+
+                  <List.Item>
+                    The entire thing is hosted on <b>Heroku</b>
+                  </List.Item>
+                  <List.Item>
+                    The app is tracked using <b>Google Tag Manager</b>
+                  </List.Item>
+                  <List.Item>
+                    The app is fully SEO optimised and has dynamic{' '}
+                    <b>Open Graph</b> tagging for all content
                   </List.Item>
                 </List>
               </Card.Meta>
