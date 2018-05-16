@@ -17,10 +17,13 @@ import {
 
 export default () =>
   <div>
-    <Head title='Roles - Simply Digital' description='I have had a range of roles in my career.' />
+    <Head
+      title='Roles - Simply Digital'
+      description='I have had a range of roles in my career.'
+    />
     <Nav />
     <Transition animation={'fade'} transitionOnMount duration={1500}>
-      <Container>
+      <Container style={{ marginTop: '50px', marginBottom: '50px' }}>
         <Header size={'huge'} textAlign='center'>
           Formal Roles I have had
         </Header>

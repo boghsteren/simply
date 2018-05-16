@@ -19,10 +19,13 @@ import {
 
 export default () =>
   <div>
-    <Head title='Code - Simply Digital' description='I dabble in code. Here is a collection of stuff I have built'/>
+    <Head
+      title='Code - Simply Digital'
+      description='I dabble in code. Here is a collection of stuff I have built'
+    />
     <Nav />
     <Transition animation={'fade'} transitionOnMount duration={1000}>
-      <Container>
+      <Container style={{ marginTop: '50px' }}>
         <Header size={'huge'} textAlign='center'>
           Websites I have built
         </Header>

@@ -23,7 +23,7 @@ export default () =>
     />
     <Nav />{' '}
     <Transition animation={'fade'} transitionOnMount duration={1500}>
-      <Container text style={{ marginBottom: '50px' }}>
+      <Container text style={{ marginBottom: '50px', marginTop: '50px' }}>
         <div>
           <Header size={'huge'} textAlign='center'>
             Consultancy I have done

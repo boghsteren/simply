@@ -23,18 +23,20 @@ export default () =>
     <Nav />
     <Transition animation={'fade'} transitionOnMount duration={1000}>
       <div>
-        <div style={{ marginTop: '-50px' }}>
+        <div>
           <Image src='../static/cover2.jpg' fluid />
           <div
             style={{
-              position: 'relative',
-              marginTop: '-50%',
-              zIndex: 99
+              position: 'fixed',
+              top: '40%',
+
+              textAlign: 'center',
+              zIndex: 99,
+              marginLeft: '20%',
+              marginRight: '20%'
             }}
           >
-            <Container text>
-              <Header>I do digital strategy, business and development</Header>
-            </Container>
+            <Header>I do digital strategy, business and development</Header>
           </div>
         </div>
       </div>
