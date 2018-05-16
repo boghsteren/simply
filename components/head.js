@@ -2,8 +2,8 @@ import NextHead from 'next/head'
 import { string } from 'prop-types'
 
 const defaultDescription = ''
-const defaultOGURL = ''
-const defaultOGImage = ''
+const defaultOGURL = 'www.simply-digital.dk'
+const defaultOGImage = '/static/simply.png'
 
 const Head = props =>
   <NextHead>

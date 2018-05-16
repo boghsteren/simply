@@ -17,10 +17,13 @@ import {
 
 export default () =>
   <div style={{ marginBottom: '50px' }}>
-    <Head title='Projects' />
+    <Head
+      title='Consultancy - Simply Digital'
+      description='I have consulted with a wide range of big and small companies.'
+    />
     <Nav />{' '}
     <Transition animation={'fade'} transitionOnMount duration={1500}>
-      <Container text>
+      <Container text style={{ marginBottom: '50px' }}>
         <div>
           <Header size={'huge'} textAlign='center'>
             Consultancy I have done

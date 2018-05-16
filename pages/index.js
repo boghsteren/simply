@@ -16,7 +16,10 @@ import {
 
 export default () =>
   <div>
-    <Head title='Home' />
+    <Head
+      title='Home - Simply Digital'
+      description='I am a seasoned digital generalist with a long track record.'
+    />
     <Nav />
     <Transition animation={'fade'} transitionOnMount duration={1000}>
       <div>

@@ -17,14 +17,14 @@ import {
 
 export default () =>
   <div>
-    <Head title='Simply Digital' />
+    <Head title='Roles - Simply Digital' description='I have had a range of roles in my career.' />
     <Nav />
     <Transition animation={'fade'} transitionOnMount duration={1500}>
       <Container>
         <Header size={'huge'} textAlign='center'>
           Formal Roles I have had
         </Header>
-        <Card.Group itemsPerRow={2}>
+        <Card.Group itemsPerRow={2} stackable>
           <Card>
             <Image src='/static/fromtu-final.jpg' />
             <Card.Content>
