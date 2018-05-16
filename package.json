@@ -4,9 +4,9 @@
   "license": "MIT",
   "scripts": {
     "build": "next build",
-    "start": "node server.js",
+    "start": "NODE_ENV=production node server.js",
     "dev": "node server.js",
-    "heroku-postbuild": "next build"
+    "heroku-postbuild": "yarn run build"
   },
   "dependencies": {
     "express": "^4.16.3",
