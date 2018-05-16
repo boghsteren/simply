@@ -31,7 +31,9 @@ export default () =>
         </Header>
         <Card.Group itemsPerRow={2} stackable>
           <Card fluid color={'red'}>
-            <Image src='../static/episodeFriis.png' />
+            <a href='http://www.episodefriis.dk'>
+              <Image src='../static/episodeFriis.png' />
+            </a>
             <Card.Content>
               <Card.Header content={'episodeFriis'} />
               <Card.Description>
@@ -91,7 +93,9 @@ export default () =>
             </Card.Content>
           </Card>
           <Card fluid color={'red'}>
-            <Image src='../static/MyJoRo.png' />
+            <a href='https://www.myjoro.com'>
+              <Image src='../static/MyJoRo.png' />
+            </a>
             <Card.Content>
               <Card.Header content={'MyJoRo'} />
               <Card.Description>
@@ -152,7 +156,9 @@ export default () =>
             </Card.Content>
           </Card>
           <Card fluid color={'red'}>
-            <Image src='../static/bybiehl.png' />
+            <a href='https://www.bybiehl.com'>
+              <Image src='../static/bybiehl.png' />
+            </a>
             <Card.Content>
               <Card.Header content={'byBiehl'} />
               <Card.Description>

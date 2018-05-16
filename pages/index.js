@@ -24,20 +24,18 @@ export default () =>
     <Transition animation={'fade'} transitionOnMount duration={1000}>
       <div>
         <div>
-          <Image src='../static/cover2.jpg' fluid />
-          <div
-            style={{
-              position: 'fixed',
-              top: '40%',
+          <Container text>
+            <div
+              style={{
+                paddingTop: '30%',
+                textAlign: 'center',
 
-              textAlign: 'center',
-              zIndex: 99,
-              marginLeft: '20%',
-              marginRight: '20%'
-            }}
-          >
-            <Header>I do digital strategy, business and development</Header>
-          </div>
+                zIndex: 99
+              }}
+            >
+              <Header>I do digital strategy, business and development</Header>
+            </div>
+          </Container>
         </div>
       </div>
     </Transition>

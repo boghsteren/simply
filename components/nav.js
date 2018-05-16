@@ -2,7 +2,14 @@ import React from "react";
 import Head from "./head";
 import Link from "next/link";
 import Router from "next/router";
-import { Sidebar, Menu, Container, Icon } from "semantic-ui-react";
+import {
+  Sidebar,
+  Menu,
+  Container,
+  Icon,
+  Divider,
+  Header
+} from "semantic-ui-react";
 import { withRouter } from "next/router";
 
 class Nav extends React.Component {
@@ -21,18 +28,26 @@ class Nav extends React.Component {
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57C93SN" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`
           }}
         />
-        <Icon
-          name="content"
-          size="large"
-          onClick={this.toggleVisibility}
-          style={{
-            position: "fixed",
-            zIndex: "1",
-            cursor: "pointer",
-            left: "50px",
-            top: "25px"
-          }}
-        />
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <Icon
+            name="content"
+            size="large"
+            onClick={this.toggleVisibility}
+            style={{
+              zIndex: "1",
+              cursor: "pointer",
+              marginTop: "20px",
+              marginLeft: "40px"
+            }}
+          />
+          <Link passHref prefetch href="/">
+            <Header style={{ marginRight: "20px", cursor: "pointer" }}>
+              Simply Digital / Jakob Sørensen
+            </Header>
+          </Link>
+        </div>
+        <Divider />
+
         <nav
           style={{
             zIndex: "999"
@@ -40,14 +55,12 @@ class Nav extends React.Component {
         >
           <Sidebar
             as={Menu}
-            color={"grey"}
             animation="push"
             width="thin"
             size="small"
             visible={this.state.visible}
             icon="labeled"
             vertical
-            inverted
           >
             <Menu.Item
               onClick={this.toggleVisibility}
@@ -55,12 +68,6 @@ class Nav extends React.Component {
             >
               <Icon name="close" />
             </Menu.Item>
-            <Link prefetch href="/">
-              <Menu.Item color={"red"} active={this.router.pathname === "/"}>
-                <Icon name="home" />
-                Simply Digital
-              </Menu.Item>
-            </Link>
             <Link prefetch href="/code">
               <Menu.Item
                 color={"red"}
