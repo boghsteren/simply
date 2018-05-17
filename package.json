@@ -9,6 +9,7 @@
     "heroku-postbuild": "yarn run build"
   },
   "dependencies": {
+    "@zeit/next-css": "^0.2.0",
     "express": "^4.16.3",
     "next": "^5.1.0",
     "react": "^16.3.1",

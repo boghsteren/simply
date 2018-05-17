@@ -28,7 +28,13 @@ class Nav extends React.Component {
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57C93SN" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`
           }}
         />
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-end"
+          }}
+        >
           <Icon
             name="content"
             size="large"
@@ -36,7 +42,6 @@ class Nav extends React.Component {
             style={{
               zIndex: "1",
               cursor: "pointer",
-              marginTop: "20px",
               marginLeft: "40px"
             }}
           />
