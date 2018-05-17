@@ -32,7 +32,8 @@ class Nav extends React.Component {
           style={{
             display: "flex",
             justifyContent: "space-between",
-            alignItems: "flex-end"
+            alignItems: "flex-end",
+            paddingBottom: "13px"
           }}
         >
           <Icon
@@ -51,7 +52,7 @@ class Nav extends React.Component {
             </Header>
           </Link>
         </div>
-        <Divider />
+        <Divider fitted />
 
         <nav
           style={{

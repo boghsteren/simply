@@ -2,6 +2,7 @@ import React from 'react'
 import Link from 'next/link'
 import Head from '../components/head'
 import Nav from '../components/nav'
+import '../style.css'
 import {
   Menu,
   Segment,
@@ -24,10 +25,14 @@ export default () =>
     <Transition animation={'fade'} transitionOnMount duration={1000}>
       <div>
         <div>
+          <div className='show-for-desktop'>
+            <Image src='/static/cover2.png' fluid />
+          </div>
           <Container text>
             <div
               style={{
-                paddingTop: '30%',
+                position: 'fixed',
+                top: '20%',
                 textAlign: 'center',
 
                 zIndex: 99
