@@ -28,10 +28,13 @@ export default () =>
           <div className='show-for-desktop'>
             <Image src='/static/cover2.png' fluid />
           </div>
+          <div className='show-for-mobile'>
+            <Image src='/static/cover3.png' fluid />
+          </div>
           <Container text>
             <div
               style={{
-                position: 'fixed',
+                position: 'absolute',
                 top: '20%',
                 textAlign: 'center',
 
@@ -41,6 +44,19 @@ export default () =>
               <Header>I do digital strategy, business and development</Header>
             </div>
           </Container>
+        </div>
+        <Divider fitted />
+        <div
+          style={{ margin: '30px', display: 'flex', justifyContent: 'center' }}
+        >
+          Copyright Simply Digital 2018 (CVR 38465635)
+        </div>
+        <div
+          style={{ margin: '30px', display: 'flex', justifyContent: 'center' }}
+        >
+          <Link passHref prefetch href='/privacy'>
+            <a>Privacy</a>
+          </Link>
         </div>
       </div>
     </Transition>

@@ -11,6 +11,7 @@ import {
   Header
 } from "semantic-ui-react";
 import { withRouter } from "next/router";
+import Cookiebanner from "./cookiebanner";
 
 class Nav extends React.Component {
   constructor({ router }) {
@@ -28,6 +29,8 @@ class Nav extends React.Component {
             __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57C93SN" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`
           }}
         />
+        <Cookiebanner />
+
         <div
           style={{
             display: "flex",
@@ -53,7 +56,6 @@ class Nav extends React.Component {
           </Link>
         </div>
         <Divider fitted />
-
         <nav
           style={{
             zIndex: "999"
