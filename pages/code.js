@@ -30,6 +30,54 @@ export default () =>
           Websites I have built
         </Header>
         <Card.Group itemsPerRow={2} stackable>
+        <Card fluid color={'blue'}>
+        <a href='http://www.fanbefaling.dk'>
+          <Image src='../static/fanbefaling.png' />
+        </a>
+        <Card.Content>
+          <Card.Header content={'Fanbefaling'} />
+          <Card.Description>
+            Fanbefaling.dk collects and presents my favorite podcasts. It is a small, but excellent collection, put out there to inspire others who also love podcasts.
+          </Card.Description>
+          <Divider />
+          <Card.Description>
+            Users can see my current faves, find podcasts by genre or by broadcaster.
+          </Card.Description>
+          <Divider />
+          <Card.Meta>
+            <List bulleted>
+              <List.Item>
+                The app was built using <b>React.js</b>
+              </List.Item>
+              <List.Item>
+                It uses the <b>Next.js</b> framework for server side
+                rendering, routing and header management.
+              </List.Item>
+              <List.Item>
+                The UI was created with the <b>Semantic UI for React</b>,
+                including transitions and responsive views
+              </List.Item>
+              <List.Item>
+                The app is served via a <b>Node.js</b> server
+              </List.Item>
+              <List.Item>
+                All the site content is created and stored in
+                <b>Contentful</b> and retrieved via API calls
+              </List.Item>
+              <List.Item>
+                The entire thing is hosted on <b>Heroku</b>
+              </List.Item>
+              <List.Item>
+                The app is tracked using <b>Google Tag Manager</b>
+              </List.Item>
+              <List.Item>
+                The app is fully SEO optimised and has dynamic
+                <b>Open Graph</b> tagging for all content
+              </List.Item>
+            </List>
+          </Card.Meta>
+        </Card.Content>
+      </Card>
           <Card fluid color={'red'}>
             <a href='http://www.episodefriis.dk'>
               <Image src='../static/episodeFriis.png' />
