@@ -20,6 +20,7 @@ export default () =>
     <Head
       title='Home - Simply Digital'
       description='I am a seasoned digital generalist with a long track record.'
+      url='http://www.simply-digital.dk/'
     />
     <Nav />
     <Transition animation={'fade'} transitionOnMount duration={1000}>

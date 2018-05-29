@@ -20,6 +20,8 @@ export default () =>
     <Head
       title='Consultancy - Simply Digital'
       description='I have consulted with a wide range of big and small companies.'
+      url='http://www.simply-digital.dk/projects'
+      ogImage='../static/projects.png'
     />
     <Nav />{' '}
     <Transition animation={'fade'} transitionOnMount duration={1500}>

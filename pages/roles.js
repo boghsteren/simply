@@ -20,6 +20,8 @@ export default () =>
     <Head
       title='Roles - Simply Digital'
       description='I have had a range of roles in my career.'
+      url='http://www.simply-digital.dk/roles'
+      ogImage='../static/roles.png'
     />
     <Nav />
     <Transition animation={'fade'} transitionOnMount duration={1500}>
