@@ -1,37 +1,32 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
+import React from "react";
+import Head from "../components/head";
+import Nav from "../components/nav";
 import {
-  Menu,
-  Segment,
   Header,
   Container,
   Card,
   List,
   Image,
-  Icon,
-  Divider,
   Transition
-} from 'semantic-ui-react'
+} from "semantic-ui-react";
 
 export default () =>
   <div>
     <Head
-      title='Roles - Simply Digital'
-      description='I have had a range of roles in my career.'
-      url='http://www.simply-digital.dk/roles'
-      ogImage='../static/roles.png'
+      title="Roles - Simply Digital"
+      description="I have had a range of roles in my career."
+      url="http://www.simply-digital.dk/roles"
+      ogImage="../static/roles.png"
     />
     <Nav />
-    <Transition animation={'fade'} transitionOnMount duration={1500}>
-      <Container style={{ marginTop: '50px', marginBottom: '50px' }}>
-        <Header size={'huge'} textAlign='center'>
+    <Transition animation={"fade"} transitionOnMount duration={1500}>
+      <Container style={{ marginTop: "50px", marginBottom: "50px" }}>
+        <Header size={"huge"} textAlign="center">
           Formal Roles I have had
         </Header>
         <Card.Group itemsPerRow={2} stackable>
           <Card>
-            <Image src='/static/fromtu-final.jpg' />
+            <Image src="/static/fromtu-final.jpg" />
             <Card.Content>
               <Card.Header>Chief Product Officer</Card.Header>
               <Card.Meta>Fromtu</Card.Meta>
@@ -124,11 +119,11 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
-            <Image src='/static/9s-final.jpg' />
+            <Image src="/static/9s-final.jpg" />
 
             <Card.Content>
               <Card.Header>Head of Product</Card.Header>
-              <Card.Meta> 9 Spokes</Card.Meta>{' '}
+              <Card.Meta> 9 Spokes</Card.Meta>{" "}
               <Card.Meta>New Zealand January 2016 – January 2017</Card.Meta>
               <Card.Description>
                 9 Spokes brings together the best of online software in one
@@ -141,7 +136,7 @@ export default () =>
               </Card.Description>
             </Card.Content>
             <Card.Content>
-              {' '}<List bulleted>
+              {" "}<List bulleted>
                 <List.Item>Formulated the overall product strategy</List.Item>
                 <List.Item>
                   Built the product roadmap and the product backlog
@@ -178,11 +173,11 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
-            <Image src='/static/lb.png' />
+            <Image src="/static/lb.png" />
 
             <Card.Content>
-              <Card.Header>Head of Product</Card.Header>{' '}
-              <Card.Meta> Lightbox</Card.Meta>{' '}
+              <Card.Header>Head of Product</Card.Header>{" "}
+              <Card.Meta> Lightbox</Card.Meta>{" "}
               <Card.Meta> New Zealand January 2014 – December 2015</Card.Meta>
               <Card.Description>
                 Lightbox is an online TV streaming service, setup and owned by
@@ -194,7 +189,7 @@ export default () =>
               </Card.Description>
             </Card.Content>
             <Card.Content>
-              {' '}<List bulleted>
+              {" "}<List bulleted>
                 <List.Item>
                   Built team of product managers, UX designers and data analysts
                   from scratch
@@ -237,7 +232,7 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
-            <Image src='/static/yousee-final.jpg' />
+            <Image src="/static/yousee-final.jpg" />
 
             <Card.Content>
               <Card.Header>Head of On Demand</Card.Header>
@@ -291,7 +286,7 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
-            <Image src='/static/yousee-final.jpg' />
+            <Image src="/static/yousee-final.jpg" />
 
             <Card.Content>
               <Card.Header>Product Manager - Digital TV</Card.Header>
@@ -301,7 +296,7 @@ export default () =>
           </Card>
           <Card>
             <Card.Content>
-              <Image src='/static/tdc-final.jpg' />
+              <Image src="/static/tdc-final.jpg" />
 
               <Card.Header>Executive Assistant</Card.Header>
               <Card.Meta>TDC Sweden</Card.Meta>
@@ -309,7 +304,7 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
-            <Image src='/static/tdc-final.jpg' />
+            <Image src="/static/tdc-final.jpg" />
 
             <Card.Content>
               <Card.Header>Product Manager - Broadband</Card.Header>
@@ -318,7 +313,7 @@ export default () =>
             </Card.Content>
           </Card>
           <Card>
-            <Image src='/static/rudersdal-final.jpg' />
+            <Image src="/static/rudersdal-final.jpg" />
 
             <Card.Content>
               <Card.Header>Analyst</Card.Header>
@@ -329,4 +324,4 @@ export default () =>
         </Card.Group>
       </Container>
     </Transition>
-  </div>
+  </div>;

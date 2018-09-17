@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { Message, Button, Container } from "semantic-ui-react";
+import { Message } from "semantic-ui-react";
 
 let showCookieBanner;
 

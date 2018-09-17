@@ -1,29 +1,17 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
-import {
-  Menu,
-  Segment,
-  Header,
-  Container,
-  Card,
-  Icon,
-  List,
-  Divider,
-  Label,
-  Transition
-} from 'semantic-ui-react'
+import React from "react";
+import Head from "../components/head";
+import Nav from "../components/nav";
+import { Container, Transition } from "semantic-ui-react";
 
 export default () =>
-  <div style={{ marginBottom: '50px' }}>
+  <div style={{ marginBottom: "50px" }}>
     <Head
-      title='Privacy - Simply Digital'
-      description='These terms govern your visit to my site.'
+      title="Privacy - Simply Digital"
+      description="These terms govern your visit to my site."
     />
-    <Nav />{' '}
-    <Transition animation={'fade'} transitionOnMount duration={1500}>
-      <Container text style={{ marginBottom: '50px', marginTop: '50px' }}>
+    <Nav />{" "}
+    <Transition animation={"fade"} transitionOnMount duration={1500}>
+      <Container text style={{ marginBottom: "50px", marginTop: "50px" }}>
         <div>
           <h1>Privacy Policy of Simply Digital</h1>
 
@@ -161,7 +149,7 @@ export default () =>
           </p>
 
           <p />
-        </div>{' '}
+        </div>{" "}
       </Container>
     </Transition>
-  </div>
+  </div>;

@@ -1,33 +1,28 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
+import React from "react";
+import Head from "../components/head";
+import Nav from "../components/nav";
 import {
-  Menu,
-  Segment,
   Header,
   Container,
-  Card,
   Icon,
   List,
   Divider,
-  Label,
   Transition
-} from 'semantic-ui-react'
+} from "semantic-ui-react";
 
 export default () =>
-  <div style={{ marginBottom: '50px' }}>
+  <div style={{ marginBottom: "50px" }}>
     <Head
-      title='Consultancy - Simply Digital'
-      description='I have consulted with a wide range of big and small companies.'
-      url='http://www.simply-digital.dk/projects'
-      ogImage='../static/projects.png'
+      title="Consultancy - Simply Digital"
+      description="I have consulted with a wide range of big and small companies."
+      url="http://www.simply-digital.dk/projects"
+      ogImage="../static/projects.png"
     />
-    <Nav />{' '}
-    <Transition animation={'fade'} transitionOnMount duration={1500}>
-      <Container text style={{ marginBottom: '50px', marginTop: '50px' }}>
+    <Nav />{" "}
+    <Transition animation={"fade"} transitionOnMount duration={1500}>
+      <Container text style={{ marginBottom: "50px", marginTop: "50px" }}>
         <div>
-          <Header size={'huge'} textAlign='center'>
+          <Header size={"huge"} textAlign="center">
             Consultancy I have done
           </Header>
           Since 2015 I have worked as a consultant and advisor in a wide variety
@@ -39,16 +34,16 @@ export default () =>
           <List>
             <List.Item>
               <List.Icon>
-                <Icon name='idea' />
-              </List.Icon>{' '}
+                <Icon name="idea" />
+              </List.Icon>{" "}
               <List.Content>
                 Corporate Digital and Technical Strategy for TV 2 A/S (Denmark)
               </List.Content>
             </List.Item>
 
             <List.Item>
-              {' '}<List.Icon>
-                <Icon name='idea' />
+              {" "}<List.Icon>
+                <Icon name="idea" />
               </List.Icon>
               <List.Content>
                 Innovation Workshop for Prehype (New York)
@@ -56,25 +51,25 @@ export default () =>
             </List.Item>
             <List.Item>
               <List.Icon>
-                <Icon name='settings' />
-              </List.Icon>{' '}
+                <Icon name="settings" />
+              </List.Icon>{" "}
               <List.Content>
                 Platform architecture advisory for Locomotion (Germany)
               </List.Content>
             </List.Item>
             <List.Item>
               <List.Icon>
-                <Icon name='google' />
-              </List.Icon>{' '}
+                <Icon name="google" />
+              </List.Icon>{" "}
               <List.Content>
                 Website performance and SEO optimisation (Wordpress) for
                 Plantepusherne.dk (Denmark)
               </List.Content>
             </List.Item>
             <List.Item>
-              {' '}<List.Icon>
-                <Icon name='calculator' />
-              </List.Icon>{' '}
+              {" "}<List.Icon>
+                <Icon name="calculator" />
+              </List.Icon>{" "}
               <List.Content>
                 Business tooling (CRM and productivity tools) and IT strategy
                 for Balder (Denmark)
@@ -88,8 +83,8 @@ export default () =>
           <List>
             <List.Item>
               <List.Icon>
-                <Icon name='google' />
-              </List.Icon>{' '}
+                <Icon name="google" />
+              </List.Icon>{" "}
               <List.Content>
                 Google Tag Manager, Analytics, Data Studio, Adwords and Facebook
                 marketing setup and training for Annex Brewery (Denmark)
@@ -98,7 +93,7 @@ export default () =>
 
             <List.Item>
               <List.Icon>
-                <Icon name='google' />
+                <Icon name="google" />
               </List.Icon>
               <List.Content>
                 Google Tag Manager, Analytics and Data Studio implementation for
@@ -106,8 +101,8 @@ export default () =>
               </List.Content>
             </List.Item>
             <List.Item>
-              {' '}<List.Icon>
-                <Icon name='idea' />
+              {" "}<List.Icon>
+                <Icon name="idea" />
               </List.Icon>
               <List.Content>
                 Strategic analysis and recommendations for 9 Spokes (New
@@ -115,8 +110,8 @@ export default () =>
               </List.Content>
             </List.Item>
             <List.Item>
-              {' '}<List.Icon>
-                <Icon name='cart' />
+              {" "}<List.Icon>
+                <Icon name="cart" />
               </List.Icon>
               <List.Content>
                 Implementation of new ecommerce platform (Prestashop hosted in
@@ -124,8 +119,8 @@ export default () =>
               </List.Content>
             </List.Item>
             <List.Item>
-              {' '}<List.Icon>
-                <Icon name='google' />
+              {" "}<List.Icon>
+                <Icon name="google" />
               </List.Icon>
               <List.Content>
                 Google Tag Manager, Analytics and Data Studio implementation for
@@ -139,16 +134,16 @@ export default () =>
           <Header> 2016 & 2015</Header>
           <List>
             <List.Item>
-              {' '}<List.Icon>
-                <Icon name='idea' />
+              {" "}<List.Icon>
+                <Icon name="idea" />
               </List.Icon>
               <List.Content>
                 Strategic advisory for Campable/Parkable (New Zealand)
               </List.Content>
             </List.Item>
             <List.Item>
-              {' '}<List.Icon>
-                <Icon name='idea' />
+              {" "}<List.Icon>
+                <Icon name="idea" />
               </List.Icon>
               <List.Content>
                 Scrum training and Jira implementation for Parkable (New
@@ -157,7 +152,7 @@ export default () =>
             </List.Item>
             <List.Item>
               <List.Icon>
-                <Icon name='bar graph' />
+                <Icon name="bar graph" />
               </List.Icon>
               <List.Content>
                 Data analysis (Qlik) for Callaghan Innovation (New Zealand)
@@ -165,7 +160,7 @@ export default () =>
             </List.Item>
             <List.Item>
               <List.Icon>
-                <Icon name='google' />
+                <Icon name="google" />
               </List.Icon>
               <List.Content>
                 Google Tag Manager, Analytics and Data Studio implementation
@@ -175,7 +170,7 @@ export default () =>
             </List.Item>
             <List.Item>
               <List.Icon>
-                <Icon name='facebook' />
+                <Icon name="facebook" />
               </List.Icon>
               <List.Content>
                 Adwords, Social marketing and SEO optimisation for Platinum (New
@@ -184,7 +179,7 @@ export default () =>
             </List.Item>
             <List.Item>
               <List.Icon>
-                <Icon name='facebook' />
+                <Icon name="facebook" />
               </List.Icon>
               <List.Content>
                 Adwords, Social marketing and SEO optimisation for Loaded (New
@@ -193,15 +188,15 @@ export default () =>
             </List.Item>
             <List.Item>
               <List.Icon>
-                <Icon name='google' />
+                <Icon name="google" />
               </List.Icon>
               <List.Content>
                 SEO review and optimisation for Rankers Reviews (New Zealand)
               </List.Content>
-            </List.Item>{' '}
+            </List.Item>{" "}
             <List.Item>
               <List.Icon>
-                <Icon name='mobile' />
+                <Icon name="mobile" />
               </List.Icon>
               <List.Content>
                 Mobile app strategy for Rodd & Gunn (New Zealand)
@@ -211,4 +206,4 @@ export default () =>
         </div>
       </Container>
     </Transition>
-  </div>
+  </div>;

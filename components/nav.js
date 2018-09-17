@@ -1,15 +1,6 @@
 import React from "react";
-import Head from "./head";
 import Link from "next/link";
-import Router from "next/router";
-import {
-  Sidebar,
-  Menu,
-  Container,
-  Icon,
-  Divider,
-  Header
-} from "semantic-ui-react";
+import { Sidebar, Menu, Icon, Divider, Header } from "semantic-ui-react";
 import { withRouter } from "next/router";
 import Cookiebanner from "./cookiebanner";
 

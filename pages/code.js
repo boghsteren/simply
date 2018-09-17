@@ -1,43 +1,93 @@
-import React from 'react'
-import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
+import React from "react";
+import Head from "../components/head";
+import Nav from "../components/nav";
 import {
-  Menu,
-  Segment,
   Header,
   Container,
   Card,
   Transition,
-  Grid,
-  Item,
-  Icon,
   Divider,
   Image,
   List
-} from 'semantic-ui-react'
+} from "semantic-ui-react";
 
 export default () =>
   <div>
     <Head
-      title='Code - Simply Digital'
-      description='I dabble in code. Here is a collection of stuff I have built'
-      url='http://www.simply-digital.dk/code'
-      ogImage='../static/code.png'
+      title="Code - Simply Digital"
+      description="I dabble in code. Here is a collection of stuff I have built"
+      url="http://www.simply-digital.dk/code"
+      ogImage="../static/code.png"
     />
     <Nav />
-    <Transition animation={'fade'} transitionOnMount duration={1000}>
-      <Container style={{ marginTop: '50px' }}>
-        <Header size={'huge'} textAlign='center'>
+    <Transition animation={"fade"} transitionOnMount duration={1000}>
+      <Container style={{ marginTop: "50px" }}>
+        <Header size={"huge"} textAlign="center">
           Websites I have built
         </Header>
         <Card.Group itemsPerRow={2} stackable>
-          <Card fluid color={'blue'}>
-            <a href='http://www.fanbefaling.dk'>
-              <Image src='../static/fanbefaling.png' />
+          <Card fluid color={"yellow"}>
+            <Image src="../static/bit.png" />
+            <Card.Content>
+              <Card.Header content={"Barn i Trivsel Portalen"} />
+              <Card.Description>
+                Barn i Trivsel Portalen is a platform for administrators and
+                advisors at Barn i Trivsel to manage customers, clients, cases
+                and sessions. The solution includes backend APIs and a front end
+                web app.
+              </Card.Description>
+              <Divider />
+              <Card.Description>
+                Admins can open and close cases, assign them to advisors, check
+                their status and see the available capacity across the team.
+                Advisors can manage their cases, schedule sessions, record notes
+                and email them out to clients.{" "}
+              </Card.Description>
+              <Divider />
+              <Card.Meta>
+                <List bulleted>
+                  <List.Item>
+                    The app was built using <b>React.js</b>
+                  </List.Item>
+                  <List.Item>
+                    The frontend UI was created with the{" "}
+                    <b>Semantic UI for React</b>, including transitions and
+                    responsive views
+                  </List.Item>
+                  <List.Item>
+                    Graphs and charts were done using <b>Recharts.js</b>{" "}
+                  </List.Item>
+                  <List.Item>
+                    The app is served via a <b>Node.js Express</b> server
+                  </List.Item>
+                  <List.Item>
+                    Authentication (including role based access controls for
+                    both UI and APIs) was done using <b>AUTH0</b>
+                  </List.Item>
+                  <List.Item>
+                    The data is stored in a <b>MongoDB</b> instance, using{" "}
+                    <b>Mongoose</b> as the interface
+                  </List.Item>
+                  <List.Item>
+                    Copy and images are stored in <b>Contentful</b> for ease of
+                    updating
+                  </List.Item>
+                  <List.Item>
+                    The entire thing is hosted on <b>Heroku</b>
+                  </List.Item>
+                  <List.Item>
+                    The app is tracked using <b>Google Tag Manager</b>
+                  </List.Item>
+                </List>
+              </Card.Meta>
+            </Card.Content>
+          </Card>
+          <Card fluid color={"blue"}>
+            <a href="http://www.fanbefaling.dk">
+              <Image src="../static/fanbefaling.png" />
             </a>
             <Card.Content>
-              <Card.Header content={'Fanbefaling'} />
+              <Card.Header content={"Fanbefaling"} />
               <Card.Description>
                 Fanbefaling.dk collects and presents my favorite podcasts. It is
                 a small, but excellent collection, put out there to inspire
@@ -76,19 +126,19 @@ export default () =>
                     The app is tracked using <b>Google Tag Manager</b>
                   </List.Item>
                   <List.Item>
-                    The app is fully SEO optimised and has dynamic
+                    The app is fully SEO optimised and has dynamic{" "}
                     <b>Open Graph</b> tagging for all content
                   </List.Item>
                 </List>
               </Card.Meta>
             </Card.Content>
           </Card>
-          <Card fluid color={'red'}>
-            <a href='http://www.episodefriis.dk'>
-              <Image src='../static/episodeFriis.png' />
+          <Card fluid color={"red"}>
+            <a href="http://www.episodefriis.dk">
+              <Image src="../static/episodeFriis.png" />
             </a>
             <Card.Content>
-              <Card.Header content={'episodeFriis'} />
+              <Card.Header content={"episodeFriis"} />
               <Card.Description>
                 episodeFriis.dk is curated by Christian, who is a massive
                 TV-show afficionado and provides blog posts and recommendations
@@ -120,7 +170,7 @@ export default () =>
                     The app is served via a <b>Node.js</b> server
                   </List.Item>
                   <List.Item>
-                    All the site content is created and stored in{' '}
+                    All the site content is created and stored in{" "}
                     <b>Contentful</b> and retrieved via API calls
                   </List.Item>
                   <List.Item>
@@ -138,19 +188,19 @@ export default () =>
                     The app is tracked using <b>Google Tag Manager</b>
                   </List.Item>
                   <List.Item>
-                    The app is fully SEO optimised and has dynamic{' '}
+                    The app is fully SEO optimised and has dynamic{" "}
                     <b>Open Graph</b> tagging for all content
                   </List.Item>
                 </List>
               </Card.Meta>
             </Card.Content>
           </Card>
-          <Card fluid color={'red'}>
-            <a href='https://www.myjoro.com'>
-              <Image src='../static/MyJoRo.png' />
+          <Card fluid color={"red"}>
+            <a href="https://www.myjoro.com">
+              <Image src="../static/MyJoRo.png" />
             </a>
             <Card.Content>
-              <Card.Header content={'MyJoRo'} />
+              <Card.Header content={"MyJoRo"} />
               <Card.Description>
                 MyJoRo is a tool for job seekers. Users can bookmark jobs they
                 find on the internet and the service will automatically save a
@@ -184,15 +234,15 @@ export default () =>
                     for screenshots
                   </List.Item>
                   <List.Item>
-                    The data about the jobs is stored and managed in a{' '}
+                    The data about the jobs is stored and managed in a{" "}
                     <b>Firebase Database</b>
                   </List.Item>
                   <List.Item>
-                    Identity management and auth (Google Auth) is done via{' '}
+                    Identity management and auth (Google Auth) is done via{" "}
                     <b>Firebase Auth</b>
                   </List.Item>
                   <List.Item>
-                    Screenshots and uploaded documents are stored in{' '}
+                    Screenshots and uploaded documents are stored in{" "}
                     <b>Firebase File Storage</b>
                   </List.Item>
                   <List.Item>
@@ -208,12 +258,12 @@ export default () =>
               </Card.Meta>
             </Card.Content>
           </Card>
-          <Card fluid color={'red'}>
-            <a href='https://www.bybiehl.com'>
-              <Image src='../static/bybiehl.png' />
+          <Card fluid color={"red"}>
+            <a href="https://www.bybiehl.com">
+              <Image src="../static/bybiehl.png" />
             </a>
             <Card.Content>
-              <Card.Header content={'byBiehl'} />
+              <Card.Header content={"byBiehl"} />
               <Card.Description>
                 byBiehl is a rapidly growing jewelry brand based in Copenhagen
                 and needed a global webshop with individual storefronts for
@@ -230,7 +280,7 @@ export default () =>
               <Card.Meta>
                 <List bulleted>
                   <List.Item>
-                    The site is a heavily modified <b>Prestashop</b>{' '}
+                    The site is a heavily modified <b>Prestashop</b>{" "}
                     implementation
                   </List.Item>
                   <List.Item>
@@ -242,15 +292,15 @@ export default () =>
                     correct based <b>IP Geolocation and redirection</b>
                   </List.Item>
                   <List.Item>
-                    It is integrated with{' '}
+                    It is integrated with{" "}
                     <b>
                       Instagram, Mailchimp, payment gateway, shipping service,
                       accounting, stock management and Google APIs
-                    </b>{' '}
+                    </b>{" "}
                     through modules and custom code
                   </List.Item>
                   <List.Item>
-                    The shop is hosted on a virtual machine in{' '}
+                    The shop is hosted on a virtual machine in{" "}
                     <b>Compute Engine in Google Cloud</b>
                   </List.Item>
                   <List.Item>
@@ -276,10 +326,10 @@ export default () =>
               </Card.Meta>
             </Card.Content>
           </Card>
-          <Card fluid color={'red'}>
-            <Image src='../static/simply.png' />
+          <Card fluid color={"red"}>
+            <Image src="../static/simply.png" />
             <Card.Content>
-              <Card.Header content={'Simply-digital.dk'} />
+              <Card.Header content={"Simply-digital.dk"} />
               <Card.Description>
                 Simply Digital is my one man band digital consultancy.
               </Card.Description>
@@ -317,7 +367,7 @@ export default () =>
                     The app is tracked using <b>Google Tag Manager</b>
                   </List.Item>
                   <List.Item>
-                    The app is fully SEO optimised and has dynamic{' '}
+                    The app is fully SEO optimised and has dynamic{" "}
                     <b>Open Graph</b> tagging for all content
                   </List.Item>
                 </List>
@@ -327,4 +377,4 @@ export default () =>
         </Card.Group>
       </Container>
     </Transition>
-  </div>
+  </div>;
