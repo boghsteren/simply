@@ -1,4 +1,7 @@
 {
+  "engines": {
+    "node": "10.0"
+  },
   "name": "simply-digital",
   "version": "1.0.0",
   "license": "MIT",
