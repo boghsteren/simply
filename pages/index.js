@@ -20,6 +20,7 @@ import Contact from "../components/contact";
 
 export default () => {
   const [currentSection, updateCurrentSection] = useState("top");
+  const width = () => (typeof window !== undefined ? 1000 : window.innerWidth);
   return (
     <div>
       <Head
@@ -36,7 +37,7 @@ export default () => {
           ></Visibility>
 
           <div>
-            <Responsive minWidth="600">
+            <Responsive getWidth={width} minWidth="600">
               <Image className="cover-image"></Image>
               <Container text>
                 <div className="text-box">
@@ -46,7 +47,7 @@ export default () => {
                 </div>
               </Container>
             </Responsive>
-            <Responsive maxWidth="600">
+            <Responsive getWidth={width} maxWidth="600">
               <Image className="cover-image-mobile"></Image>
               <Container text>
                 <div className="text-box-mobile">
