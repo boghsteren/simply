@@ -1,129 +1,54 @@
 import React from "react";
-import Link from "next/link";
-import { Sidebar, Menu, Icon, Divider, Header } from "semantic-ui-react";
-import { withRouter } from "next/router";
+import { Menu, Icon, Responsive } from "semantic-ui-react";
 import Cookiebanner from "./cookiebanner";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
-class Nav extends React.Component {
-  constructor({ router }) {
-    super();
-    this.state = { visible: false };
-    this.router = router;
-  }
-  toggleVisibility = () => this.setState({ visible: !this.state.visible });
+export default ({ currentSection }) => {
+  return (
+    <div>
+      <noscript
+        dangerouslySetInnerHTML={{
+          __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57C93SN" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`
+        }}
+      />
+      <Cookiebanner />
 
-  render() {
-    return (
-      <div>
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57C93SN" height="0" width="0" style="display:none;visibility:hidden;"></iframe>`
-          }}
-        />
-        <Cookiebanner />
-
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "flex-end",
-            paddingBottom: "13px"
-          }}
-        >
-          <Icon
-            name="content"
-            size="large"
-            onClick={this.toggleVisibility}
-            style={{
-              zIndex: "1",
-              cursor: "pointer",
-              marginLeft: "40px"
-            }}
-          />
-          <Link passHref prefetch href="/">
-            <Header style={{ marginRight: "20px", cursor: "pointer" }}>
-              Simply Digital / Jakob Sørensen
-            </Header>
-          </Link>
-        </div>
-        <Divider fitted />
-        <nav
-          style={{
-            zIndex: "999"
-          }}
-        >
-          <Sidebar
-            as={Menu}
-            animation="push"
-            width="thin"
-            size="small"
-            visible={this.state.visible}
-            icon="labeled"
-            vertical
-          >
-            <Menu.Item
-              onClick={this.toggleVisibility}
-              style={{ paddingTop: "20px" }}
-            >
-              <Icon name="close" />
-            </Menu.Item>
-            <Link prefetch href="/code">
-              <Menu.Item
-                color={"red"}
-                active={this.router.pathname === "/code"}
-              >
-                <Icon name="code" />
-                Websites
-              </Menu.Item>
-            </Link>
-            <Link prefetch href="/projects">
-              <Menu.Item
-                color={"red"}
-                active={this.router.pathname === "/projects"}
-              >
-                <Icon name="wrench" />
-                Consultancy
-              </Menu.Item>
-            </Link>
-            <Link prefetch href="/roles">
-              <Menu.Item
-                color={"red"}
-                active={this.router.pathname === "/roles"}
-              >
-                <Icon name="id card outline" />
-                Roles
-              </Menu.Item>
-            </Link>
-
-            <Menu.Item
-              as={"a"}
-              href="https://github.com/boghsteren"
-              color={"red"}
-            >
-              <Icon name="github" />
-              Github
-            </Menu.Item>
-            <Menu.Item
-              as={"a"}
-              color={"red"}
-              href="https://www.linkedin.com/in/jakobbs/"
-            >
-              <Icon name="linkedin" />
-              Linkedin
-            </Menu.Item>
-            <Menu.Item
-              as={"a"}
-              color={"red"}
-              href="mailto:jakob@simply-digital.dk"
-            >
-              <Icon name="envelope" />
-              Contact
-            </Menu.Item>
-          </Sidebar>
-        </nav>
-      </div>
-    );
-  }
-}
-
-export default withRouter(Nav);
+      <Menu secondary pointing fixed="top" style={{ backgroundColor: "white" }}>
+        <AnchorLink href="#top">
+          <Menu.Item active={currentSection === "top"}>
+            <Responsive minWidth="600"> Simply Digital</Responsive>
+            <Responsive maxWidth="600"> Simply</Responsive>
+          </Menu.Item>
+        </AnchorLink>
+        <AnchorLink href="#roles">
+          <Menu.Item active={currentSection === "roles"}>
+            <Icon name="id card outline" />
+            <Responsive minWidth="600"> Experience</Responsive>
+            <Responsive maxWidth="600"> Jobs</Responsive>
+          </Menu.Item>
+        </AnchorLink>
+        <AnchorLink href="#projects">
+          <Menu.Item active={currentSection === "projects"}>
+            <Icon name="wrench" />
+            <Responsive minWidth="600"> Projects & Consultancy Work</Responsive>
+            <Responsive maxWidth="600"> Projects</Responsive>
+          </Menu.Item>
+        </AnchorLink>
+        <AnchorLink href="#code">
+          <Menu.Item active={currentSection === "code"}>
+            <Icon name="code" />
+            <Responsive minWidth="600"> Coding & Development</Responsive>
+            <Responsive maxWidth="600">Code</Responsive>
+          </Menu.Item>
+        </AnchorLink>
+        <AnchorLink href="#contact">
+          <Menu.Item active={currentSection === "contact"}>
+            <Icon name="envelope" />
+            <Responsive minWidth="600"> Get in touch</Responsive>
+            <Responsive maxWidth="600"> Contact</Responsive>{" "}
+          </Menu.Item>
+        </AnchorLink>
+      </Menu>
+    </div>
+  );
+};

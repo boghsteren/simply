@@ -1,60 +1,123 @@
-import React from "react";
-import Link from "next/link";
+import React, { useState } from "react";
 import Head from "../components/head";
 import Nav from "../components/nav";
 import "../style.css";
 import {
-  Image,
   Header,
   Container,
   Divider,
-  Transition
+  Transition,
+  Visibility,
+  Modal,
+  Image,
+  Responsive
 } from "semantic-ui-react";
+import Code from "../components/code";
+import Projects from "../components/projects";
+import Roles from "../components/roles";
+import Privacy from "../components/privacy";
+import Contact from "../components/contact";
 
-export default () =>
-  <div>
-    <Head
-      title="Home - Simply Digital"
-      description="I am a seasoned digital generalist with a long track record."
-      url="http://www.simply-digital.dk/"
-    />
-    <Nav />
-    <Transition animation={"fade"} transitionOnMount duration={1000}>
-      <div>
-        <div>
-          <div className="show-for-desktop">
-            <Image src="/static/cover2.png" fluid />
-          </div>
-          <div className="show-for-mobile">
-            <Image src="/static/cover3.png" fluid />
-          </div>
-          <Container text>
-            <div
-              style={{
-                position: "absolute",
-                top: "20%",
-                textAlign: "center",
+export default () => {
+  const [currentSection, updateCurrentSection] = useState("top");
+  return (
+    <div>
+      <Head
+        title="Home - Simply Digital"
+        description="I am a seasoned digital generalist with a long track record."
+        url="http://www.simply-digital.dk/"
+      />
+      <Nav currentSection={currentSection} />
+      <Transition animation={"fade"} transitionOnMount duration={1000}>
+        <div id="top">
+          <Visibility
+            once={false}
+            onTopVisible={() => updateCurrentSection("top")}
+          ></Visibility>
 
-                zIndex: 99
-              }}
+          <div>
+            <Responsive minWidth="600">
+              <Image className="cover-image"></Image>
+              <Container text>
+                <div className="text-box">
+                  <Header size="huge">
+                    Digital strategy, business and development
+                  </Header>
+                </div>
+              </Container>
+            </Responsive>
+            <Responsive maxWidth="600">
+              <Image className="cover-image-mobile"></Image>
+              <Container text>
+                <div className="text-box-mobile">
+                  <Header size="huge">
+                    Digital strategy, business and development
+                  </Header>
+                </div>
+              </Container>
+            </Responsive>
+          </div>
+          <Divider fitted />
+          <div id="roles">
+            <Visibility
+              once={false}
+              onOnScreen={() => updateCurrentSection("roles")}
             >
-              <Header>I do digital strategy, business and development</Header>
+              <Roles></Roles>
+            </Visibility>
+          </div>
+          <div id="projects">
+            <Visibility
+              once={false}
+              onTopVisible={() => updateCurrentSection("projects")}
+            >
+              <Projects></Projects>
+            </Visibility>
+          </div>
+          <div id="code">
+            <Visibility
+              once={false}
+              onTopVisible={() => updateCurrentSection("code")}
+            >
+              <Code></Code>
+            </Visibility>
+          </div>
+          <div id="contact">
+            <Visibility
+              once={false}
+              onTopVisible={() => updateCurrentSection("contact")}
+            >
+              <Contact></Contact>
+            </Visibility>
+          </div>
+          <div
+            style={{
+              margin: "20px",
+              display: "flex",
+              justifyContent: "space-around"
+            }}
+          >
+            <div>
+              <Modal
+                closeIcon
+                trigger={
+                  <Header size="small" as="a" style={{ cursor: "pointer" }}>
+                    Privacy
+                  </Header>
+                }
+              >
+                <Modal.Header>Privacy Policy</Modal.Header>
+                <Modal.Content>
+                  <Privacy></Privacy>
+                </Modal.Content>
+              </Modal>
             </div>
-          </Container>
+            <div>
+              <Header size="small">Simply Digital (CVR 38465635)</Header>
+            </div>
+          </div>
         </div>
-        <Divider fitted />
-        <div
-          style={{ margin: "30px", display: "flex", justifyContent: "center" }}
-        >
-          Copyright Simply Digital 2018 (CVR 38465635)
-        </div>
-        <div
-          style={{ margin: "30px", display: "flex", justifyContent: "center" }}
-        >
-          <Link passHref prefetch href="/privacy">
-            <a>Privacy</a>
-          </Link>
-        </div>
-      </div>
-    </Transition>
-  </div>;
+      </Transition>
+    </div>
+  );
+};
