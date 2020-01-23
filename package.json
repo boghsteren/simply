@@ -6,7 +6,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "dev": "next",
-    "heroku-postbuild": "yarn run build"
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "@zeit/next-css": "^1.0.1",
