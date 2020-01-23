@@ -20,7 +20,7 @@ import Contact from "../components/contact";
 
 export default () => {
   const [currentSection, updateCurrentSection] = useState("top");
-  const width = () => (typeof window !== undefined ? 1000 : window.innerWidth);
+  const width = () => (typeof window !== undefined ? window.innerWidth : 1000);
   return (
     <div>
       <Head
