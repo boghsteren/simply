@@ -4,7 +4,7 @@ import Cookiebanner from "./cookiebanner";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 export default ({ currentSection }) => {
-  const width = () => (typeof window !== undefined ? window.innerWidth : 1000);
+  const width = () => (window ? window.innerWidth : 1000);
   return (
     <div>
       <noscript
