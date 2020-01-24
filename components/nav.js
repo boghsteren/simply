@@ -15,7 +15,12 @@ export default ({ currentSection }) => {
       />
       <Cookiebanner />
 
-      <Menu secondary pointing fixed="top" style={{ backgroundColor: "white" }}>
+      <Menu
+        secondary
+        pointing
+        fixed="top"
+        style={{ backgroundColor: "white", maxWidth: "100vw" }}
+      >
         <AnchorLink href="#top">
           <Menu.Item active={currentSection === "top"}>
             <Responsive getWidth={width} minWidth="600">
@@ -28,19 +33,19 @@ export default ({ currentSection }) => {
         </AnchorLink>
         <AnchorLink href="#roles">
           <Menu.Item active={currentSection === "roles"}>
-            <Icon name="id card outline" />
             <Responsive getWidth={width} minWidth="600">
+              <Icon name="id card outline" />
               Experience
             </Responsive>
             <Responsive getWidth={width} maxWidth="600">
-              Jobs
+              CV
             </Responsive>
           </Menu.Item>
         </AnchorLink>
         <AnchorLink href="#projects">
           <Menu.Item active={currentSection === "projects"}>
-            <Icon name="wrench" />
             <Responsive getWidth={width} minWidth="600">
+              <Icon name="wrench" />
               Projects & Consultancy Work
             </Responsive>
             <Responsive getWidth={width} maxWidth="600">
@@ -50,8 +55,8 @@ export default ({ currentSection }) => {
         </AnchorLink>
         <AnchorLink href="#code">
           <Menu.Item active={currentSection === "code"}>
-            <Icon name="code" />
             <Responsive getWidth={width} minWidth="600">
+              <Icon name="code" />
               Coding & Development
             </Responsive>
             <Responsive getWidth={width} maxWidth="600">
@@ -61,8 +66,8 @@ export default ({ currentSection }) => {
         </AnchorLink>
         <AnchorLink href="#contact">
           <Menu.Item active={currentSection === "contact"}>
-            <Icon name="envelope" />
             <Responsive getWidth={width} minWidth="600">
+              <Icon name="envelope" />
               Get in touch
             </Responsive>
             <Responsive getWidth={width} maxWidth="600">
